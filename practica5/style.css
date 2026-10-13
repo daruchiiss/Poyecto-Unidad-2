@@ -1,98 +1,96 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s;
 }
 
 body {
-    padding: 20px;
-    background-color: #f8f9fa;
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f4f4f9;
+  max-width: 800px;
+  margin: auto;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background: white;
+  padding: 20px;
+  border: 2px solid #333;
 }
 
-h2 {
-    color: #222;
-    transition: color 0.3s;
+button {
+  padding: 8px 16px;
+  cursor: pointer;
 }
 
 main {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
-}
-
-.tarjeta-1, .tarjeta-2 {
-    grid-column: span 3;
-}
-
-.tarjeta-3, .tarjeta-4, .tarjeta-5 {
-    grid-column: span 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+  background: white;
+  padding: 20px;
+  border: 2px solid #333;
 }
 
 main > div {
-    background-color: #ffffff;
-    border: 2px solid red;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    transition: transform 0.3s, border-color 0.3s, background-color 0.3s;
-}
-
-main > div:hover {
-    transform: scale(1.05);
-    border-color: pink;
+  background: #eee;
+  border: 2px solid #ccc;
+  padding: 15px;
+  text-align: center;
 }
 
 main img {
-    width: 100%;
-    max-width: 120px;
-    height: auto;
-    margin-top: 15px;
-    border-radius: 4px;
-    transition: transform 0.3s;
+  height: 80px;
+  width: 100%;
+  object-fit: contain;
+  margin-top: 10px;
+  display: block;
 }
 
-.tarjeta-1 img,
+.tarjeta-1:hover img {
+  content: url("img/duo.jpg");
+}
+
 .tarjeta-2 img {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
-.tarjeta-1:hover img,
 .tarjeta-2:hover img {
-    transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
-body.cambiado h2 {
-    color: #007bff;
+.tarjeta-3:hover img {
+  transform: scale(1.3);
 }
 
-body.cambiado main > div {
-    background-color: #e2e2e2;
+.tarjeta-4 {
+  border: 2px solid red;
 }
 
-body.cambiado img {
-    display: none;
+.tarjeta-4:hover {
+  border: 12px solid pink;
 }
 
-@media (max-width: 650px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
+body.activo h2 {
+  color: gold;
+}
 
-    main {
-        grid-template-columns: 1fr;
-    }
+body.activo main > div {
+  background: #d0e7ff;
+}
 
-    .tarjeta-1, .tarjeta-2, .tarjeta-3, .tarjeta-4, .tarjeta-5 {
-        grid-column: span 1;
-    }
+body.activo img {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+  }
 }
