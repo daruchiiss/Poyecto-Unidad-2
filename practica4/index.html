@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Receta de agua de limon">
+    <meta name="Author" content="Darabanana">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Recetario</title>
+</head>
+<body>
+
+    <header>
+        <h1>Recetario</h1>
+    </header>
+
+    <main class="container">
+        <div class="div1">
+            <h2>Agua de Limón</h2>
+        </div>
+
+        <div class="contenido-flex">
+            <div class="div2">
+                <h3>Ingredientes</h3>
+                <ul>
+                    <li id="ing-limones" data-img="img/limones.png">5 limones</li>
+                    <li id="ing-agua" data-img="img/agua.png">1 litro de agua</li>
+                    <li id="ing-azucar" data-img="img/azucar.png">3 cucharadas de azúcar</li>
+                </ul>
+
+                <h3>Preparación</h3>
+                <ol class="preparacion">
+                    <li>Vacía los 3 ingredientes en una jarra.</li>
+                    <li>Mezcla todo.</li>
+                </ol>
+            </div>
+
+            <div class="div3">
+                <!-- Imagen dinámica que cambiará al pasar el mouse por cada ingrediente -->
+                <img id="imagen-referencia" src="img/limones.png" alt="Imagen de referencia">
+            </div>
+        </div>
+
+        <div class="boton-container">
+            <button id="btn-modo">Modo Oscuro</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

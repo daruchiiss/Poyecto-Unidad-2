@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #222;
+    transition: color 0.3s;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.tarjeta-1, .tarjeta-2 {
+    grid-column: span 3;
+}
+
+.tarjeta-3, .tarjeta-4, .tarjeta-5 {
+    grid-column: span 2;
+}
+
+main > div {
+    background-color: #ffffff;
+    border: 2px solid red;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s, border-color 0.3s, background-color 0.3s;
+}
+
+main > div:hover {
+    transform: scale(1.05);
+    border-color: pink;
+}
+
+main img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+
+.tarjeta-1 img,
+.tarjeta-2 img {
+    transform: rotate(45deg);
+}
+
+.tarjeta-1:hover img,
+.tarjeta-2:hover img {
+    transform: rotate(0deg);
+}
+
+body.cambiado h2 {
+    color: #007bff;
+}
+
+body.cambiado main > div {
+    background-color: #e2e2e2;
+}
+
+body.cambiado img {
+    display: none;
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-1, .tarjeta-2, .tarjeta-3, .tarjeta-4, .tarjeta-5 {
+        grid-column: span 1;
+    }
+}
